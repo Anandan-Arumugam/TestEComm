@@ -22,28 +22,28 @@ app.use(bodyParser.json());
 
 app.use(bodyParser.urlencoded({extended: true}));
 
-var mysql      = require('mysql');
-var pool = mysql.createPool({
- 	connectionLimit : 100, //important
-    host     : 'localhost',
-    user     : 'EComm',
-    password : 'EComm',
-    database : 'EComm',
-    port     : '3306',
-    debug    :  false
-});
-
-
 // var mysql      = require('mysql');
 // var pool = mysql.createPool({
 //  	connectionLimit : 100, //important
-//     host     : 'ecomm.clumahyxe987.us-east-1.rds.amazonaws.com',
+//     host     : 'localhost',
 //     user     : 'EComm',
-//     password : '12345678',
+//     password : 'EComm',
 //     database : 'EComm',
 //     port     : '3306',
-//     debug    :  true
+//     debug    :  false
 // });
+
+
+var mysql      = require('mysql');
+var pool = mysql.createPool({
+ 	connectionLimit : 100, //important
+    host     : 'ecomm.clumahyxe987.us-east-1.rds.amazonaws.com',
+    user     : 'EComm',
+    password : '12345678',
+    database : 'EComm',
+    port     : '3306',
+    debug    :  true
+});
 
 
 //Store all HTML files in view folder.
